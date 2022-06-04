@@ -3,14 +3,9 @@ const hre = require("hardhat");
 async function deploy() {
 
   const SesshoPunks = await hre.ethers.getContractFactory("SesshoPunks");
-  const sesshoPunks = await SesshoPunks.deploy(2);
+  const sesshoPunks = await SesshoPunks.deploy(10000);
 
   await sesshoPunks.deployed();
-  await sesshoPunks.mint();
-  
-  let current = await sesshoPunks.current();
-  console.log("My cripto NFT:", current );
-
 
   console.log("My cripto NFT:", await sesshoPunks.name());
   console.log("Deployed at:", sesshoPunks.address);
