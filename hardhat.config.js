@@ -7,7 +7,7 @@ module.exports = {
   solidity: "0.8.4",
   networks: {
               rinkeby: {
-                url: 'https://rinkeby.infura.io/v3/${projectID}',
+                url: `https://rinkeby.infura.io/v3/${projectID}`,
                 accounts: [privateKey]
               }
   }
